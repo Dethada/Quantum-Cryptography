@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from math import sqrt
+from sys import argv
 
 # returns all factors of x except for 1 and x itself
 # O(sqrt(N)/2)
@@ -12,7 +13,14 @@ def factorize(x):
 
 # print(factorize(2978273257))
 def main():
-    print(factorize(int(input('Enter n: '))))
+    if len(argv) != 2:
+        print('Usage: {} <number>'.format(argv[0]))
+        return
+    try:
+        print(factorize(int(argv[1])))
+    except ValueError:
+        print('Invalid number!')
+        return
 
 if __name__ == '__main__':
     main()

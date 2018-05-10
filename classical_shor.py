@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from random import randint
 from math import gcd
+from sys import argv
 
 # finds the multiplicative order of a mod n
 # https://stackoverflow.com/a/642533
@@ -46,8 +47,11 @@ def solve(n):
 
 
 def main():
+    if len(argv) != 2:
+        print('Usage: {} <number>'.format(argv[0]))
+        return
     try:
-        n = int(input('Enter n (product of 2 primes): ') )
+        n = int(argv[1])
     except ValueError:
         print('Invalid input')
         return
