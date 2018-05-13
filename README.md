@@ -1,4 +1,6 @@
-# Shor's Algorithm
+# Quantum Cryptography
+
+## Shor's Algorithm
 
 Please do not actually use classical_shor.py to try to factorize large numbers, it is a really inefficient way of factorization for a classical computer.
 
@@ -18,3 +20,7 @@ python3 -m timeit -s 'import pure_factorization' 'pure_factorization.factorize(8
   * Shor's algorithm implemented purely with classical algorithm
 * pure_factorization.py
   * Classical way of finding prime factors
+
+## Grover's Algorithm
+
+Reduces the time complexity of finding the input to a black box(Oracle) function that produces a particular output from O(N) to O(sqrt(N)).
